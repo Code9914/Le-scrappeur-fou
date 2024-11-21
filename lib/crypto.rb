@@ -12,7 +12,7 @@ def scrape
   scraped_pages
 end
 
-def details
+def crypto_details
   details_arr = []
   scrape.each do |node|
     name = node.css('td.cmc-table__cell--sort-by__name a').text.strip
@@ -36,4 +36,4 @@ def details
   details_arr.each { |hash| puts hash }
 end
 
-details
+crypto_details
