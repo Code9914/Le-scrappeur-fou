@@ -15,12 +15,12 @@ end
 def crypto_details
   details_arr = []
   scrape.each do |node|
-    name = node.css('td.cmc-table__cell--sort-by__name a').text.strip
-    market_cap = node.css('td.cmc-table__cell--sort-by__market-cap span[2]').text.strip
-    price = node.css('td.cmc-table__cell--sort-by__price span').text.strip
-    volume = node.css('td.cmc-table__cell--sort-by__volume-24-h a').text.strip
-    circulating_supply = node.css('td.cmc-table__cell--sort-by__circulating-supply div').text.strip
-    change = node.css('td.cmc-table__cell--sort-by__percent-change-24-h div').text.strip
+    name = node.css('td.cmc-table__cell--sort-by__name a').text
+    market_cap = node.css('td.cmc-table__cell--sort-by__market-cap span[2]').text
+    price = node.css('td.cmc-table__cell--sort-by__price span').text
+    volume = node.css('td.cmc-table__cell--sort-by__volume-24-h a').text
+    circulating_supply = node.css('td.cmc-table__cell--sort-by__circulating-supply div').text
+    change = node.css('td.cmc-table__cell--sort-by__percent-change-24-h div').text
 
     details_hash = {
       Name: name,
